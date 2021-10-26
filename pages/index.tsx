@@ -9,5 +9,5 @@
 // import { HousesQuery, HousesQueryVariables } from "src/generated/HousesQuery";
 
 export default function Home() {
-  return <div>Home</div>;
+  return <div className="text-white">Home</div>;
 }
