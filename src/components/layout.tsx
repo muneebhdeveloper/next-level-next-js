@@ -1,9 +1,9 @@
 // import { FunctionComponent, ReactNode } from "react";
 import Link from "next/link";
-// import { useAuth } from "src/auth/useAuth";
+import { useAuth } from "src/auth/useAuth";
 
 const Layout = ({ children }) => {
-  const authenticated = false;
+  const { authenticated, logout } = useAuth();
   return (
     <div className="bg-gray-900 max-w-screen-2xl mx-auto text-white">
       <nav className="bg-gray-800 h-16 shadow-sm">
