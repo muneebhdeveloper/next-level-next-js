@@ -8,5 +8,9 @@ const config = {
 };
 
 export default function initFirebase() {
-  firebase.initializeApp(config);
+  if (!firebase.apps.length) {
+    firebase.initializeApp(config);
+  } else {
+    firebase.app();
+  }
 }
