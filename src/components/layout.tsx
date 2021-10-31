@@ -5,8 +5,8 @@ import { useAuth } from "src/auth/useAuth";
 const Layout = ({ children }) => {
   const { authenticated, logout } = useAuth();
   return (
-    <div className="bg-gray-900 max-w-screen-2xl mx-auto text-white">
-      <nav className="bg-gray-800 h-16 shadow-sm">
+    <>
+      <nav className="bg-gray-800 h-16 shadow-sm text-white">
         <div className="px-6 flex items-center justify-between h-16">
           <Link href="/">
             <a>
@@ -31,8 +31,10 @@ const Layout = ({ children }) => {
           )}
         </div>
       </nav>
-      <main style={{ minHeight: "calc(100vh - 64px)" }}>{children}</main>
-    </div>
+      <div className="bg-gray-900 max-w-screen-2xl mx-auto text-white">
+        <main style={{ minHeight: "calc(100vh - 64px)" }}>{children}</main>
+      </div>
+    </>
   );
 };
 
